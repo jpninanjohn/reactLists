@@ -1,10 +1,14 @@
 import React from 'react'
+import ListItem from './ListItem'
 
 function ListOfNumbers(props) {
     return (
-        <div>O
-            <ul>{props.numbers.map(
-                (number) => <li>{number * 2}</li>)
+        <div>
+            <ul>{props.numbers
+                .map(
+                    (number) =>
+                        <ListItem key={number.toString()} value={number} />
+                )
             }
             </ul>
         </div>
